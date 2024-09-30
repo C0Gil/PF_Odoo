@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record model="ir.ui.view" id="view_preuspuesto_form_ticket_price">
+        <field name="name">view.preuspuesto.form.ticket.price</field>
+        <field name="model">presupuesto</field>
+        <field name="inherit_id" ref="peliculas.view_preuspuesto_form"/>
+        
+        <field name="arch" type="xml">
+            <field name="opinion" position="before">
+                <field name="price_of_ticket"/>
+                <field name="ticket_currency"/>
+            </field>
+        </field>
+
+    </record>
+</odoo>

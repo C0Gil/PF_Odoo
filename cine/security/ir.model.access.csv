@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_cinema,access to cinema,model_cinema,peliculas.group_pelicula_usuario,1,1,1,0
+access_cinema_details,access to cinema details,model_cinema_details,peliculas.group_pelicula_usuario,1,1,1,0
+access_theater, access to theater,model_theater,peliculas.group_pelicula_usuario,1,1,1,0
+
+access_cinema,access to cinema,model_cinema,peliculas.group_pelicula_administrador,1,1,1,1
+access_cinema_details,access to cinema details,model_cinema_details,peliculas.group_pelicula_administrador,1,1,1,1
+access_theater, access to theater,model_theater,peliculas.group_pelicula_administrador,1,1,1,1

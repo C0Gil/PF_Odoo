@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <record id="action_open_cine" model="ir.actions.act_window">
+        <field  name="name">Cine</field>
+        <field  name="res_model">cinema</field>
+        <field  name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_open_theater" model="ir.actions.act_window">
+        <field  name="name">Sala</field>
+        <field  name="res_model">theater</field>
+        <field  name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_Principal_cinema" name="Cine" parent="peliculas.menu_principal"/>
+    <menuitem id="menu_cinema_principal" name="Cines" parent="menu_Principal_cinema" action="action_open_cine"/>     
+    <menuitem id="menu_cinema_theater" name="Salas" parent="menu_Principal_cinema" action="action_open_theater"/>
+</odoo>

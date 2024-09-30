@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id="category_cinema" model="res.partner.category">
+        <field name="name">Cine</field>
+    </record>    
+</odoo>

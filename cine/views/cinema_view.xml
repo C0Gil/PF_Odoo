@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id="view_cinema_form" model="ir.ui.view">
+        <field name="name">Vista formulario Para cine</field>
+        <field name="model">cinema</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <h1>
+                        <field name="name" placeholder="Nombre del Cine"/>
+                    </h1>
+                    <group>
+                        <field name="state" invisible="1"/>
+                        <field name="address_id" placeholder="Direccion" domain="[('category_id', 'in', [address_categories])]"/>
+                        <field name="address_categories" invisible="1"/>
+                        <field name="movie_ids" placeholder="Peliculas" widget="many2many_tags"/>
+                    </group>
+
+                    <field name="details_ids">
+                        <tree editable="bottom">
+                            <control>
+                                <create name="add_product_control" string="Agregar Sala"/>
+                            </control>
+                            <field name="name"/>
+                            <field name="num_theater"/>
+                            <field name="movie"/>
+                            <field name="ticket_price"/>
+                            <field name="currency_id"/>
+                        </tree>
+                    </field>
+                    
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_cinema_tree" model="ir.ui.view">
+        <field name="name">Vista formulario Para cine</field>
+        <field name="model">cinema</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="address_id"/>
+                <field name="movie_ids"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
